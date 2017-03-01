@@ -1,0 +1,25 @@
+<div class='container'>
+	<h3>Expense's Table.</h3>
+	<table class="table table-responsive table-hover" id="expensesTable">
+		<thead>
+			<tr>
+				<th>Expense Description</th>
+				<th>Expense Date</th>
+				<th>Expense Time</th>
+				<th>Expense Quantity</th>
+				<th>Expense Price</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="x in expenses" class="clickable-row" ng-click="clicked(x)">
+				<td>{{ x.expenseDescription }}</td>			
+				<td>{{ x.expenseDate.dayOfMonth}}/{{x.expenseDate.monthValue}}/{{x.expenseDate.year}}</td>
+				<td>{{ x.expenseTime.hour}}:{{x.expenseTime.minute}}:{{x.expenseTime.second}}</td>
+				<td>{{ x.quantity }}</td>
+				<td>{{ x.price }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
